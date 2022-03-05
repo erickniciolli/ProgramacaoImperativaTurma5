@@ -49,5 +49,35 @@ comparar(asiaScores, euroScores)
 
 
 
+let ParticipanteA= [5, 8, 4, 9, 5]
+let ParticipanteB= [8, 7, 8, 6, 8]
+let ParticipanteC= [7, 5, 10, 8, 3]
 
 
+function pontuacaoMedia (participante) {
+    let soma=0
+    for (let i=0; i<=4; i++) {
+        soma=soma+participante[i]
+    }
+    return (soma/5)
+}
+
+console.log(pontuacaoMedia(ParticipanteA))
+
+function pontuacaoMaior (participante) {
+    return Math.max.apply(null, participante)
+}
+
+console.log(pontuacaoMaior(ParticipanteA))
+
+function competicao (participante1, participante2, participante3) {
+    let media1;
+    let media2;
+    let media3;
+    return media1=pontuacaoMedia(participante1);
+    media2=pontuacaoMedia(participante2);
+    media3=pontuacaoMedia(participante3);
+    console.log(Math.max(media1, media2, media3))
+}
+
+competicao(ParticipanteA, ParticipanteB, ParticipanteC)
